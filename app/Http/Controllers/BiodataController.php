@@ -36,11 +36,12 @@ class BiodataController extends Controller
             return redirect()->route('biodata.index')->with(['error'=>'Data gagal disimpan']);
         }
     }
-    public function edit(Biodata $biodata)
+    public function edit($id)
     {
+        $biodata=Biodata::find($id);
         return view('biodata.edit', compact('biodata'));
     }
-    public function update(Request $request, Biodata $biodata)
+    public function update(Request $request, $id)
     {
     $this->validate($request, [
         'nama' => 'required',
@@ -53,7 +54,7 @@ class BiodataController extends Controller
     ]);
     //get data biodata by ID
  
-    $biodata=Biodata::findOrFail($biodata->id); 
+    $biodata=Biodata::findOrFail($id); 
     $biodata->update([
        
         'nama'=>$request->nama,
