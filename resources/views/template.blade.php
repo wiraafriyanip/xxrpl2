@@ -23,7 +23,10 @@
 <a class="nav-link" href="{{url('/home')}}"><font color="white">Home</font> <span class="sr-only">(current)</span></a>
  </li>
 <li class="nav-item">
-  <a class="nav-link" href="{{url('/data')}}"><font color="white">Mata Pelajaran</font></a>
+  <a class="nav-link" href="{{url('/data')}}"><font color="white">kelola biodata</font></a>
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="{{url('/biodata')}}"><font color="white">biodata</font></a>
 </li>
  <li class="nav-item">
  <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"><font color="white">Disabled</font></a>
