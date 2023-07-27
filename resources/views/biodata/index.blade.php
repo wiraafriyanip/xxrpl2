@@ -1,15 +1,10 @@
-@extends('template2')
+@extends('template')
 
 @section('konten')
 <button id="tombolku" class="btn btn-primary">Input biodata</button>
 
 <h2>Daftar biodata</h2>
 
-<div class="container mt-5">
-<div class="row">
-<div class="col-md-12">
-<div class="card border-0 shadow rounded">
-<div class="card-body">
 
 <table class="table table-bordered">
 <thead>
@@ -47,11 +42,7 @@ Data Blog belum Tersedia.
 @endforelse
 </tbody>
 </table>
-</div>
-</div>
-</div>
-</div>
-</div>
+
 <script
 src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script
@@ -74,8 +65,7 @@ toastr.error('{{ session('error') }}', 'GAGAL!');
         <p>Form input bio data</p>
         <form action="{{ route('biodata.store') }}" method="POST" enctype="multipart/form-data" name="form1"> 
         @csrf
-            </div>
-            <div class="mb-3">
+        <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Nama</label>
                 <input type="text" name="nama" class="form-control" id="exampleFormControlInput1" placeholder="Masukkan nama" onBlur="masukannama()" onFocus="window.status='Silahkan Mengisi nama Anda';">
             </div>
@@ -85,23 +75,20 @@ toastr.error('{{ session('error') }}', 'GAGAL!');
               </div>
             
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">jurusan</label>
+                <label for="exampleFormControlInput3" class="form-label">jurusan</label>
                 <input type="text" name="jurusan" onBlur="masukanjurusan()" onFocus="window.status='Silahkan Mengisi jurusan Anda';"class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
               </div>
-            <div class="form-group">
-                <label>kelas</label>
-                <input type="text" name="kelas" onBlur="masukankelas()" onFocus="window.status='Silahkan Mengisi kelas Anda';">
-            </div>
-            
-            <div>
+              <div class="mb-3">
+                <label for="exampleFormControlInput4" class="form-label">kelas</label>
+                <input type="text" name="kelas" onBlur="masukankelas()" onFocus="window.status='Silahkan Mengisi kelas Anda';"class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+              </div>
                 <input type="submit" value="SIMPAN" class="btn btn-primary">
                 <input type="reset" value="BATAL" class="btn btn-danger">
-               
-
             </div>
         </form>
     </div>
 </div>
+
 
 
 @endsection

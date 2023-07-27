@@ -56,11 +56,11 @@ class BiodataController extends Controller
  
     $biodata=Biodata::findOrFail($id); 
     $biodata->update([
-       
+        
         'nama'=>$request->nama,
         'ttl'=>$request->ttl,
         'jurusan'=>$request->jurusan,
-        'kelas'=>$request->kelas ,
+        'kelas'=>$request->kelas 
         
       
        
