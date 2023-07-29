@@ -5,14 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Buku extends Model
+class Penerbit extends Model
 {
     use HasFactory;
     protected $fillable =[
-        'judul','penerbit','jumlah'
+        'nama','alamat','no'
     ];
-    public function relasipenerbit ()
-    {
-        return $this->BelongsTo(Penerbit::class,'penerbit');
-    }
 }

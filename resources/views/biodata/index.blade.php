@@ -1,10 +1,10 @@
 @extends('template')
 
 @section('konten')
-<button id="tombolku" class="btn btn-primary">Input biodata</button>
+
 
 <h2>Daftar biodata</h2>
-
+<button id="tombolku" class="btn btn-primary">Input biodata</button>
 
 <table class="table table-bordered">
 <thead>
@@ -26,7 +26,7 @@
 
 
 <td class="text-center">
-<form onsubmit="return confirm('Apakah Anda Yakin?');" action="{{ route('biodata.destroy', $biodata->id) }}" method="POST">
+<form   action="{{ route('biodata.destroy', $biodata->id) }}" method="POST">
 <a href="{{ route('biodata.edit', $biodata->id) }}"
 class="btn btn-sm btn-primary">EDIT</a>
 @csrf
