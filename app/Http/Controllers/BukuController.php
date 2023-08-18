@@ -23,11 +23,13 @@ class BukuController extends Controller
         $this->validate($request,[
             'judul'=>'required',
             'penerbit'=>'required',
+            'pengarang'=>'required',
             'jumlah'=>'required'
         ]);
         DB::table('bukus')->insert([
             'judul'=>$request->judul,
             'penerbit'=>$request->penerbit,
+            'pengarang'=>$request->pengarang,
             'jumlah'=>$request->jumlah
         ]);
         if(DB::table('bukus')){
@@ -47,6 +49,7 @@ class BukuController extends Controller
         'judul' => 'required',
        
         'penerbit' => 'required',
+        'pengarang' => 'required',
         'jumlah' => 'required',
         
         
@@ -60,6 +63,7 @@ class BukuController extends Controller
         'judul'=>$request->judul,
       
         'penerbit'=>$request->penerbit,
+        'pengarang'=>$request->pengarang,
         'jumlah'=>$request->jumlah 
         
       

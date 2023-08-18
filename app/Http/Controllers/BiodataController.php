@@ -80,7 +80,7 @@ class BiodataController extends Controller
         $biodata = Biodata::findOrFail($id);
 
         $biodata->delete();
-        Alert::success('Success', 'data berhasil dihapus');
+        Alert::success('Success', 'data berhasil dihapus');                 
         if($biodata){
             //redirect dengan pesan sukses
             return redirect()->route('biodata.index')->with(['success' => 'Data Berhasil Dihapus!']);
@@ -88,5 +88,11 @@ class BiodataController extends Controller
             //redirect dengan pesan error
             return redirect()->route('biodata.index')->with(['error' => 'Data Gagal Dihapus!']);
         }
+    }
+    public function show($id)
+    {
+        $data = Biodata::findOrFail($id);
+        return view ('biodata.show', compact('data'));
+
     }
 }

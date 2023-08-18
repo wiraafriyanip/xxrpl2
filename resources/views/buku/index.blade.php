@@ -9,6 +9,7 @@
 <tr>
 <th scope="col">Judul Buku</th>
 <th scope="col">penerbit</th>
+<th scope="col">pengarang</th>
 <th scope="col">jumlah</th>
 <th scope="col">AKSI</th>
 </tr>
@@ -18,6 +19,7 @@
 <tr>
 <td class="text-center">{{ $buku->judul }}</td>
 <td class="text-center">{{ $buku->relasipenerbit->nama }}</td>
+<td class="text-center">{{ $buku->pengarang }}</td>
 <td class="text-center">{{ $buku->jumlah }}</td>
 
 
@@ -80,6 +82,11 @@ toastr.error('{{ session('error') }}', 'GAGAL!');
                 </select>
             
             </div>
+            <div class="form-group">
+                <label>pengarang</label>
+                <input type="text" name="pengarang">
+            
+            <div>
             <div class="form-group">
                 <label>jumlah</label>
                 <input type="text" name="jumlah">

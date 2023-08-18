@@ -30,6 +30,15 @@
                             @enderror
                         </div>
                         <div class="form-group">
+                            <label class="font-weight-bold">pengarang</label>
+                            <input type="text" class="form-control @error('pengarang') is-invalid @enderror" name="pengarang" value="{{ old('pengarang', $buku->pengarang) }}" placeholder="Masukkan pengarang">
+                            @error('pengarang')
+                                <div class="alert alert-danger mt-2">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <div class="form-group">
                             <label class="font-weight-bold">jumlah</label>
                             <input type="text" class="form-control @error('jumlah') is-invalid @enderror" name="jumlah" value="{{ old('jumlah', $buku->jumlah) }}" placeholder="Masukkan jumlah">
                             @error('jumlah')

@@ -1,6 +1,8 @@
-@extends('template')
+@extends('template3')
 
 @section('konten')
+
+<div class="container">
 
 
 <h2>Daftar biodata</h2>
@@ -27,8 +29,9 @@
 
 <td class="text-center">
 <form   action="{{ route('biodata.destroy', $biodata->id) }}" method="POST">
-<a href="{{ route('biodata.edit', $biodata->id) }}"
-class="btn btn-sm btn-primary">EDIT</a>
+<a href="{{ route('biodata.edit', $biodata->id) }}"class="btn btn-sm btn-primary">EDIT</a>
+<a href="{{ route('biodata.show', $biodata->id) }}"class="btn btn-sm btn-primary">detail</a>
+<a href="{{ route('foto.edit', $biodata->id) }}"class="btn btn-sm btn-primary">Upload foto</a>
 @csrf
 @method('DELETE')
 <button type="submit" class="btn btn-sm btn-danger">HAPUS</button>
@@ -90,5 +93,5 @@ toastr.error('{{ session('error') }}', 'GAGAL!');
 </div>
 
 
-
+</div>
 @endsection

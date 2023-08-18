@@ -9,7 +9,7 @@ class Buku extends Model
 {
     use HasFactory;
     protected $fillable =[
-        'judul','penerbit','jumlah'
+       'judul','penerbit','pengarang','jumlah'
     ];
     public function relasipenerbit ()
     {

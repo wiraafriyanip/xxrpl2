@@ -22,3 +22,4 @@ Route::get('/', function () {
 Route::resource('buku', BukuController::class); 
 Route::resource('biodata', BiodataController::class); 
 Route::resource('penerbit', PenerbitController::class); 
+Route::resource('foto', FotoController::class); 
